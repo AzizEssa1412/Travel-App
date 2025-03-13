@@ -5,6 +5,7 @@ const port = process.env.PORT || 4007;
 
 describe('Basic Express Server Test', () => {
   it('should return a 200 status when the server is up and running', async () => {
-    // الاختبار فارغ، لكن سيتم اختبار السرفر هنا
+    const response = await request(app).get('/');
+    expect(response.statusCode).toBe(200);
   });
 });
